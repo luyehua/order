@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: order
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG  #此处一定要填对，即为eureka上配置里的service-id(Application)
+      profile: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8762/eureka
